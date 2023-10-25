@@ -9,9 +9,7 @@ import java.time.Duration;
 
 public class BrowserHelper {
 
-    //this class is for methods with specific things` we do, and to eliminate same code we make methods.
-
-
+//for shorter reusage. wait unitl el is visible or clickable
     public static WebElement waitForVisibilityOfElement(WebDriver driver, WebElement element, int timeToWaitInSeconds) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeToWaitInSeconds));
 

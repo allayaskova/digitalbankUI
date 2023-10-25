@@ -27,7 +27,7 @@ public class Driver {
         if (driver == null) {
 
 
-            String browser = ConfigReader.getPropertiesValue("BROWSER");
+            String browser = ConfigReader.getPropertiesValue("digitalbank.browser");
 
             switch (browser.toLowerCase()) {
 
@@ -68,7 +68,7 @@ public class Driver {
 
             }
         }
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(9));
         driver.manage().window().maximize();
         return driver;
     }
