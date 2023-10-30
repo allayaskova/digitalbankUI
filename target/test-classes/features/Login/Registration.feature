@@ -1,9 +1,10 @@
 @Registration
 Feature: Registration
+Background:
+  Given the following user with email "jacktest1@test.co" is not in DB
+  And the user navigates to signup page
 
   Scenario: Positive case. Successful creation of DBank account
-    Given the following user with email "jacktest1@test.co" is not in DB
-    And the user navigates to signup page
     When the user creates account with following fields
       | title | firstName | lastName | gender | DOB        | SSN         | email             | password   | confirmPassword | address    | locality | region | postalCode | country | homePhone  | mobilePhone | workPhone  | agreeToTermsCheckBox |
       | Mr.   | Jack      | Test     | M      | 12/12/1991 | 123-44-2236 | jacktest1@test.co | Tester123! | Tester123!      | 12 Main St | City     | CA     | 99921      | US      | 2146598800 | 2144598800  | 2146498800 | true                 |
